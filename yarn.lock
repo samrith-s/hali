@@ -1062,6 +1062,9 @@ __metadata:
     rollup: ^3.7.4
     tslib: ^2.4.1
     typescript: ^4.9.4
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
