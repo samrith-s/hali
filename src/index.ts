@@ -1,3 +1,1 @@
-console.log("Hello world!");
-
-export {};
+export { Store } from "./Store";

@@ -3,9 +3,10 @@
   "author": "Samrith Shankar <samrith.shankar@outlook.com>",
   "version": "0.0.0",
   "type": "module",
+  "module": "lib/index.js",
+  "types": "lib/typescript/index.d.ts",
   "description": "A simple and lightweight state management library for React Native",
   "license": "MIT",
-  "module": "lib/index.js",
   "homepage": "https://github.com/samrith-s/hali#readme",
   "repository": {
     "type": "git",
@@ -16,15 +17,18 @@
   },
   "scripts": {
     "build": "rollup -c rollup.config.js",
+    "lint": "eslint . --ext=ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@rollup/plugin-eslint": "^9.0.1",
     "@rollup/plugin-typescript": "^10.0.1",
     "@types/node": "^18.11.15",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.1",
     "rollup": "^3.7.4",
@@ -32,7 +36,7 @@
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react": ">=16.8.0",
+    "react-native": ">=64.0.0"
   }
 }

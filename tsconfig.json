@@ -1,7 +1,6 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "moduleResolution": "node",
     "baseUrl": ".",
     "alwaysStrict": true,
     "skipDefaultLibCheck": true,
@@ -13,6 +12,11 @@
     "incremental": true,
     "checkJs": true,
     "resolveJsonModule": true,
-    "composite": true
+    "composite": true,
+    "declaration": true,
+    "outDir": "lib",
+    "declarationDir": "lib/types",
+    "moduleResolution": "node",
+    "target": "ESNext"
   }
 }
