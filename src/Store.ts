@@ -1,5 +1,5 @@
 import { HaliEventEmitter } from "./EventEmitter";
-import { Hali } from "./interface";
+import { Hali } from "./Interface";
 
 export class Store {
   private readonly emitter = new HaliEventEmitter();

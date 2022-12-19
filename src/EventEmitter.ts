@@ -1,4 +1,4 @@
-import { Hali } from "./interface";
+import { Hali } from "./Interface";
 
 export class HaliEventEmitter {
   private eventsMap: Record<Hali.EventTypes, Hali.EventListener[]> =
