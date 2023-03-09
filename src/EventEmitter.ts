@@ -1,6 +1,6 @@
 import { Hali } from "./Interface";
 
-export class HaliEventEmitter {
+export class HaliEventEmitter<State = any> {
   private eventsMap: Record<Hali.EventTypes, Hali.EventListener[]> =
     Object.values(Hali.EventTypes).reduce(
       (acc, event) => ({
@@ -10,13 +10,13 @@ export class HaliEventEmitter {
       {} as any
     );
 
-  emit<T = any>(event: Hali.EventTypes, data?: T) {
+  emit<State>(event: Hali.EventTypes, data: State) {
     this.eventsMap[event].forEach((listener) => listener(data));
   }
 
-  on<T = any>(
+  on(
     event: Hali.EventTypes,
-    listener: Hali.EventListener<T>
+    listener: Hali.EventListener<State>
   ): Hali.EventHandler {
     this.eventsMap[event].push(listener);
 
